@@ -1,0 +1,36 @@
+.feature-box {
+  background-color: rgba($color-white, .8);
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+  transition: transform .2s;
+
+  @include respond(tab-land) {
+    padding: 2rem;
+  }
+
+  &__logo-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__icon{
+    font-size: 6rem;
+    margin-bottom: 1.5rem;
+    @include respond(tab-land) {
+      font-size: 5rem;
+    }
+
+    &:not(:last-child) {
+      margin-right: 4rem;
+    }
+  }
+
+  &__text {
+    line-height: 1.3;
+    font-size: 1.5rem;
+    text-align: left;
+  }
+}

@@ -1,0 +1,35 @@
+.badge {
+  position: relative;
+  padding-left: 7rem;
+
+  &__badge-box {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background-color: $color-red;
+  color: $color-white;
+  position: absolute;
+  top: -1.5rem;
+  left: 0;
+  display: inline-block;
+
+
+  }
+  &__main {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 60%;
+    left: 49%;
+    font-size: 3.8rem;
+  }
+
+  &__sub {
+    position: absolute;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 9px;
+    top: 22%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+  }
+}

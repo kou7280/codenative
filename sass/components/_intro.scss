@@ -1,0 +1,23 @@
+.intro {
+
+  &__picture {
+    float: left;
+    shape-outside: circle(50% at 50% 50%);
+    width: 16rem;
+    height: 16rem;
+
+    @include respond(phone) {
+      float: none;
+      width: 14rem;
+      height: 14rem;
+      margin: 0 auto;
+    }
+  }
+
+  &__heading {
+    @include respond(phone) {
+      text-align: center;
+
+    }
+  }
+}

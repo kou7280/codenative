@@ -1,0 +1,24 @@
+.side-picture {
+  height: 35rem;
+  width: 100%;
+  background-size: cover;
+  background-position: top;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+  transition: all .3s;
+
+  @include respond(tab-port) {
+    height: 25rem;
+  }
+
+  @include respond(phone) {
+    height: 20rem
+  }
+
+  &--1 {
+    background-image: url(../img/20.jpg);
+  }
+
+  &--2 {
+    background-image: url(../img/startup-849804_1920.jpg);
+  }
+}

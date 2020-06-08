@@ -1,0 +1,73 @@
+.page-top {
+  background-color: $color-gray-light;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  position: fixed;
+  right: 4rem;
+  bottom: 4rem;
+  cursor: pointer;
+  box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+  transition: all .2s;
+  z-index: 100;
+  display: none;
+
+  @include respond(phone) {
+    width: 5rem;
+    height: 5rem;
+    right: 2.5rem;
+    bottom: 2.5rem;
+  }
+  
+
+  &__text {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.3rem;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    line-height: 1.1;
+    top: 70%;
+    color: $color-gray;
+    backface-visibility: hidden;
+
+    @include respond(phone) {
+      display: none;
+    }
+  }
+
+  &__arr {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    border-top: 2px solid $color-gray;
+    border-right: 2px solid $color-gray;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    transition: all .2s;
+
+    @include respond(phone) {
+      width: 2rem;
+      height: 2rem;
+      top: 55%;
+    }
+  }
+
+  &:hover &__arr {
+    opacity: .7;
+  }
+
+  &:hover {
+    transform: translateY(-.2rem);
+    opacity: .9;
+    box-shadow: 0 .5rem 2rem rgba($color-black, .3);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+  }
+}

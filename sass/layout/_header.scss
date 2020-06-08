@@ -1,0 +1,124 @@
+.header {
+  height: 95vh;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba($color-purple, 0.8),
+    rgba($color-pink, 0.8)),
+  url(../img/hero_img.jpg);
+  background-size: cover;
+  background-position: top;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 50% 100%, 0 75vh);
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 50% 100%, 0 75vh);
+  position: relative;
+
+  @include respond(phone) {
+    height: 85vh;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 50% 100%, 0 75vh);
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 50% 100%, 0 75vh);
+  }
+
+  &__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+
+    @include respond(tab-port) {
+      top: 3rem;
+      left: 3rem;
+    }
+
+    @include respond(phone) {
+      top: 2rem;
+      left: 2rem;
+    }
+  }
+  
+  &__logo {
+    height: 5rem;
+
+    @include respond(tab-land) {
+      height: 4.5rem;
+    }
+
+    @include respond(tab-port) {
+      height: 4rem;
+    }
+
+    @include respond(phone) {
+      height: 3.5rem;
+    }
+  }
+  
+  &__text-box {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+  }
+
+  &__arrow-box {
+    position: relative;
+    top: 80%;
+    cursor: pointer;
+  }
+  
+  &__arrow-text {
+    display: inline-block;
+    position: absolute;
+    top: 13rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Poppins", sans-serif;
+    color: $color-white;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+
+    @include respond(phone) {
+      top: 7.5rem;
+    }
+  }
+  
+  &__arrow--1 {
+    display: inline-block;
+    position: absolute;
+    top: 9rem;
+    left: 50%;
+    width: 10rem;
+    height: 10rem;
+    -webkit-transform: translate(-50%, -50%) rotate(45deg) skew(calc((90deg - 150deg) / 2), calc((90deg - 150deg) / 2));
+    transform: translate(-50%, -50%) rotate(45deg) skew(calc((90deg - 150deg) / 2), calc((90deg - 150deg) / 2));
+    border-bottom: 2px solid $color-white;
+    border-right: 2px solid $color-white;
+    
+    -webkit-animation: moveInUpArrow 1s infinite;
+    animation: moveInUpArrow 1s infinite;
+
+    @include respond(phone) {
+      top: 3.5rem;
+    }
+    
+  }
+  
+  &__arrow--2 {
+    display: inline-block;
+    position: absolute;
+    top: 11rem;
+    left: 50%;
+    width: 10rem;
+    height: 10rem;
+    -webkit-transform: translate(-50%, -50%) rotate(45deg) skew(calc((90deg - 150deg) / 2), calc((90deg - 150deg) / 2));
+    transform: translate(-50%, -50%) rotate(45deg) skew(calc((90deg - 150deg) / 2), calc((90deg - 150deg) / 2));
+    border-bottom: 2px solid $color-white;
+    border-right: 2px solid $color-white;
+  
+    -webkit-animation: moveInUpArrow 1s infinite;
+    animation: moveInUpArrow 1s infinite;
+
+    @include respond(phone) {
+      top: 5.5rem;
+    }
+  }
+  
+}
